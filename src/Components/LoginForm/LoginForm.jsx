@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './LoginForm.css';
 import { FaUser, FaLock } from 'react-icons/fa';
 import config from '../../config'; // Doğru yolu kontrol edin
+import { Link } from 'react-router-dom'; 
 
 const LoginForm = () => {
   const [username, setUsername] = useState('');
@@ -79,7 +80,7 @@ const LoginForm = () => {
 
         <div className="register-link">
           <p>
-            Don't have an account? <a href="#">Register</a>
+          Don't have an account? <Link to="/register">Register</Link> {/* Link bileşeni ile güncellendi */}
           </p>
         </div>
       </form>
